@@ -1,6 +1,6 @@
 'use strict';
 
-const random = ["Rock", "Paper", "Scissors"];
+const random = ["rock", "paper", "scissors"];
 
 function computerPlay() {
     let randomStr = random[Math.floor(Math.random() * random.length)];
@@ -9,25 +9,21 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     let player = playerSelection.toLowerCase();
-    if(player === 'scissors' && computerSelection === 'Paper') {
+    if(player === 'scissors' && computerSelection === 'paper') {
         return "You win! Scissors beats Paper";
-    } else if(player === 'paper' && computerSelection === 'Rock') {
+    } else if(player === 'paper' && computerSelection === 'rock') {
         return "You win! Paper beats Rock";
-    } else if(player === 'rock' && computerSelection === 'Scissors') {
+    } else if(player === 'rock' && computerSelection === 'scissors') {
         return "You win! Rock beats Scissors";
-    } else if(player === 'scissors' && computerSelection === 'Rock') {
+    } else if(player === 'scissors' && computerSelection === 'rock') {
         return "You lose! Rock beats Scissors";
-    } else if(player === 'paper' && computerSelection === 'Scissors') {
+    } else if(player === 'paper' && computerSelection === 'scissors') {
         return "You lose! Scissors beats Paper";
-    } else if(player === 'rock' && computerSelection === 'Paper') {
+    } else if(player === 'rock' && computerSelection === 'paper') {
         return "You lose! Paper beats Rock";
-    } else if(player === 'rock' && computerSelection === 'Rock') {
+    } else if(player == computerSelection) {
         return "Draw";
-    } else if(player === 'paper' && computerSelection === 'Paper') {
-        return "Draw";
-    } else if(player === 'scissors' && computerSelection === 'Scissors') {
-        return "Draw";
-    }
+    } 
 }
 
 
@@ -52,6 +48,7 @@ function game() {
             i--;
         } else {
             alert("Wrong input! Enter again");
+            i--;
         }
     }
     return console.log(`Your score: ${playerScore}`), console.log(`Computer's score: ${computerScore}`), console.log(playerScore > computerScore ? 'You win!' : 'You lose!');
