@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>You have to win 5 times in total</div>
-    <div class="you-chose">You chose:</div>
-    <div class="computer-chose">Computer chose:</div>
-    <div class="result">Result:</div>
-    <div class="your-score">Your score:</div>
-    <div class="computer-score">Computer score:</div>
-    <div></div>
-    <button class="rock">rock</button> 
-    <button class="paper">paper</button> 
-    <button class="scissors">scissors</button>   
-    <button class="reset">Reset game</button>
+    <h1 class="header">Rock Paper Scissors</h1>
+    <div class="goal">You have to win 5 times</div>
+    <div class="button-container">
+        <button class="button rock"><img src="rock.png"></button> 
+        <button class="button paper"><img src="paper.png"></button> 
+        <button class="button scissors"><img src="scissors.png"></button>
+    </div>
+    <div class="scores">
+        <div class="you">
+            <p class="you-text">You</p>
+            <div class="your-score">0</div>
+        </div>
+        <div class="computer">
+            <p class="computer-text">Computer</p>
+            <div class="computer-score">0</div>
+        </div>
+    </div>
+    <div class="result"></div>
+    <div class="reset-btn-container">
+        <button class="reset">Play again</button>
+    </div>
 </body>
 </html>

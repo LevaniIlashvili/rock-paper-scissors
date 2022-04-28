@@ -8,8 +8,6 @@ function computerSelection() {
 
 const yourScore = document.querySelector(".your-score");
 const computerScore = document.querySelector(".computer-score");
-const youChose = document.querySelector(".you-chose");
-const computerChose = document.querySelector(".computer-chose");
 const result = document.querySelector(".result");
 
 let yScore = 0;
@@ -26,24 +24,22 @@ rock.addEventListener("click", () => {
         return; 
     }
     let comp = computerSelection();
-    youChose.textContent = "You chose: rock";
-    computerChose.textContent = `Computer chose: ${comp}`
     if(comp === "scissors") {
         yScore++;
-        yourScore.textContent = `Your score: ${yScore}`;
-        result.textContent = "Result: You win! Rock beats Scissors" 
+        yourScore.textContent = yScore;
+        result.textContent = "You win! Rock beats Scissors" 
     } else if(comp === "paper") {
         cScore++;
-        computerScore.textContent = `Computer score: ${cScore}`;
-        result.textContent = "Result: You lose! Paper beats Rock";
+        computerScore.textContent = cScore;
+        result.textContent = "You lose! Paper beats Rock";
     } else {
-        result.textContent = "Result: Draw";
+        result.textContent = "Tie!";
     }
 
     if(yScore === 5) {
-        result.textContent = "Result: Game Over! You win!"
+        result.textContent = "Game Over! You win!"
     } else if(cScore === 5) {
-        result.textContent = "Result: Game Over! Computer wins!";
+        result.textContent = "Game Over! Computer wins!";
     }
 } );
 
@@ -54,24 +50,22 @@ paper.addEventListener("click", () => {
         return; 
     }
     let comp = computerSelection();
-    youChose.textContent = "You chose: paper";
-    computerChose.textContent = `Computer chose: ${comp}`
     if(comp === "rock") {
         yScore++;
-        yourScore.textContent = `Your score: ${yScore}`;
-        result.textContent = "Result: You win! Paper beats Rock" 
+        yourScore.textContent = yScore;
+        result.textContent = "You win! Paper beats Rock" 
     } else if(comp === "scissors") {
         cScore++;
-        computerScore.textContent = `Computer score: ${cScore}`;
-        result.textContent = "Result: You lose! Scissors beats Paper";
+        computerScore.textContent = cScore;
+        result.textContent = "You lose! Scissors beats Paper";
     } else {
-        result.textContent = "Result: Draw";
+        result.textContent = "Tie!";
     }
 
     if(yScore === 5) {
-        result.textContent = "Result: Game Over! You win!"
+        result.textContent = "Game Over! You win!"
     } else if(cScore === 5) {
-        result.textContent = "Result: Game Over! Computer wins!";
+        result.textContent = "Game Over! Computer wins!";
     }
 } );
 
@@ -82,34 +76,30 @@ scissors.addEventListener("click", () => {
         return; 
     }
     let comp = computerSelection();
-    youChose.textContent = "You chose: scissors";
-    computerChose.textContent = `Computer chose: ${comp}`
     if(comp === "paper") {
         yScore++;
-        yourScore.textContent = `Your score: ${yScore}`;
-        result.textContent = "Result: You win! Scissors beats Paper" 
+        yourScore.textContent = yScore;
+        result.textContent = "You win! Scissors beats Paper" 
     } else if(comp === "rock") {
         cScore++;
-        computerScore.textContent = `Computer score: ${cScore}`;
-        result.textContent = "Result: You lose! Rock beats Scissors";
+        computerScore.textContent = cScore;
+        result.textContent = "You lose! Rock beats Scissors";
     } else {
-        result.textContent = "Result: Draw";
+        result.textContent = "Tie!";
     }
 
     if(yScore === 5) {
-        result.textContent = "Result: Game Over! You win!"
+        result.textContent = "Game Over! You win!"
     } else if(cScore === 5) {
-        result.textContent = "Result: Game Over! Computer wins!";
+        result.textContent = "Game Over! Computer wins!";
     }
 } );
 
 
 reset.addEventListener("click", () => {
-    youChose.textContent = "You chose:";
-    computerChose.textContent = "Computer chose:";
-    result.textContent = "Result:";
-    yourScore.textContent = "Your score:";
-    computerScore.textContent = "Computer score:";
+    result.textContent = "";
+    yourScore.textContent = "0";
+    computerScore.textContent = "0";
     yScore = 0;
     cScore = 0; 
 })

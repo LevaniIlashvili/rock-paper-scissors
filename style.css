@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: RGB(255,255,36);
+    font-family: 'Press Start 2P', 'sans-sarif';
+}
+
+.header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 90px;
+    text-shadow: 3px 3px 1px rgb(255, 255, 255);
+}
+
+.goal {
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 2px 3px 1px rgb(255, 255, 255);
+    margin-bottom: 80px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.button {
+    border: solid 3px white;
+    border-radius: 7px;
+}
+
+img {
+    padding: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.you, .computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    text-shadow: 2px 3px 1px rgb(255, 255, 255);
+}
+.result {
+    height: 16px;
+    text-align: center;
+    text-shadow: 2px 3px 1px rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+
+.reset-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.reset {
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    margin-bottom: 20px;
+}
